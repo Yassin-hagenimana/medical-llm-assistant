@@ -289,50 +289,7 @@ python deployment/app.py --share
 uvicorn deployment.api:app --host 0.0.0.0 --port 8000 --reload
 
 # Access interactive docs at: http://localhost:8000/docs
-```
-
-#### Query Example (FastAPI)
-```python
-import requests
-
-response = requests.post(
-    "http://localhost:8000/query",
-    json={"query": "What are the symptoms of diabetes?"}
-)
-print(response.json())
-```
-
-Access interactive API documentation at http://localhost:8000/docs when the server is running.
-
-### Model Inference
-
-```python
-from transformers import AutoTokenizer, AutoModelForCausalLM
-from peft import PeftModel
-
-# Load base model and tokenizer
-base_model = AutoModelForCausalLM.from_pretrained("TinyLlama/TinyLlama-1.1B-Chat-v1.0")
-tokenizer = AutoTokenizer.from_pretrained("TinyLlama/TinyLlama-1.1B-Chat-v1.0")
-
-# Load fine-tuned LoRA weights
-model = PeftModel.from_pretrained(base_model, "models/final/medical-llm-lora")
-
-# Generate response
-prompt = "What are the symptoms of diabetes?"
-inputs = tokenizer(prompt, return_tensors="pt")
-outputs = model.generate(**inputs, max_new_tokens=256)
-response = tokenizer.decode(outputs[0], skip_special_tokens=True)
-print(response)
-```
-
-## Experiment Tracking
-
-All experiments are logged in [experiments/experiment_log.csv](experiments/experiment_log.csv) with the following information:
-- Hyperparameters tested
-- Training metrics (loss, runtime, GPU memory)
-- Evaluation metrics (BLEU, ROUGE, perplexity)
-- Qualitative observations
-
+``
 ## Conversation Examples
 
 ### Example 1: Symptom Inquiry
@@ -414,7 +371,6 @@ Yassin Hagenimana
 ## Contact
 
 - GitHub: [@Yassin-hagenimana](https://github.com/Yassin-hagenimana)
-- Email: [Your Email]
 
 ## Citation
 
