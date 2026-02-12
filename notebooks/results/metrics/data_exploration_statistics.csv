@@ -1,0 +1,12 @@
+Metric,Value
+Total Samples,5000
+Avg Question Length (words),15.75
+Avg Answer Length (words),58.29
+Max Question Length,58
+Max Answer Length,196
+Min Question Length,0
+Min Answer Length,1
+Median Question Length,15.0
+Median Answer Length,43.0
+Std Dev Question Length,5.80
+Std Dev Answer Length,43.96

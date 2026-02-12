@@ -1,0 +1,7 @@
+| Experiment | Date | Learning Rate | Batch Size | Gradient Accum | Epochs | LoRA Rank | LoRA Alpha | Train Loss | Val Loss | BLEU | ROUGE-1 | ROUGE-L | Perplexity | GPU Memory (GB) | Train Time (hrs) | Notes |
+|------------|------|---------------|------------|----------------|--------|-----------|------------|------------|----------|------|---------|---------|------------|-----------------|------------------|-------|
+| 1_baseline | TBD | 2.0e-4 | 2 | 4 | 3 | 16 | 32 | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD | Baseline configuration |
+| 2_higher_lr | TBD | 5.0e-4 | 2 | 4 | 3 | 16 | 32 | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD | Testing faster convergence |
+| 3_lower_lr | TBD | 1.0e-4 | 2 | 4 | 3 | 16 | 32 | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD | Testing stability |
+| 4_rank_32 | TBD | 2.0e-4 | 2 | 4 | 3 | 32 | 64 | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD | Increased capacity |
+| 5_larger_batch | TBD | 2.0e-4 | 2 | 8 | 3 | 16 | 32 | TBD | TBD | TBD | TBD | TBD | TBD | TBD | TBD | Larger effective batch |

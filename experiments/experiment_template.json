@@ -1,0 +1,41 @@
+{
+  "experiment_id": "",
+  "experiment_name": "",
+  "date": "",
+  "model": {
+    "base_model": "",
+    "model_size": ""
+  },
+  "hyperparameters": {
+    "learning_rate": 0.0,
+    "batch_size": 0,
+    "gradient_accumulation_steps": 0,
+    "num_epochs": 0,
+    "lora_r": 0,
+    "lora_alpha": 0,
+    "lora_dropout": 0.0,
+    "max_length": 0,
+    "optimizer": "",
+    "lr_scheduler": ""
+  },
+  "training_metrics": {
+    "train_loss": 0.0,
+    "eval_loss": 0.0,
+    "train_runtime": 0.0,
+    "train_samples_per_second": 0.0,
+    "gpu_memory_used_gb": 0.0
+  },
+  "evaluation_metrics": {
+    "bleu_score": 0.0,
+    "rouge_1": 0.0,
+    "rouge_2": 0.0,
+    "rouge_l": 0.0,
+    "perplexity": 0.0
+  },
+  "qualitative_analysis": {
+    "sample_outputs": [],
+    "strengths": [],
+    "weaknesses": []
+  },
+  "notes": ""
+}

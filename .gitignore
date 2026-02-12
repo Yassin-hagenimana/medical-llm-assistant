@@ -205,3 +205,60 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+node`_modules/
+
+# Medical LLM Assistant Project Specific
+
+# Models and checkpoints (large files)
+models/checkpoints/*
+models/final/*
+!models/checkpoints/.gitkeep
+!models/final/.gitkeep
+
+# Data files (can be large - not committed to git)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Results folder - keep structure, ignore generated files
+results/visualizations/**/*.png
+results/visualizations/**/*.jpg
+results/metrics/*.csv
+results/metrics/*.json
+results/models/*
+results/experiments/*.txt
+results/experiments/*.png
+# Keep folder structure
+!results/**/.gitkeep
+!results/README.md
+
+# Experiment tracking
+wandb/
+runs/
+logs/
+
+# Evaluation outputs
+evaluation/metrics/*.json
+evaluation/comparisons/*.png
+!evaluation/metrics/.gitkeep
+!evaluation/comparisons/.gitkeep
+
+# Model binary files (large)
+*.bin
+*.pt
+*.pth
+*.safetensors
+*.h5
+*.ckpt
+
+# Dataset files (very large)
+*.csv.gz
+*.parquet
+*.feather
+*.arrow
+
+#docs
+API_USAGE.md
+QUICK_START.md
+QUICKSTART.md
