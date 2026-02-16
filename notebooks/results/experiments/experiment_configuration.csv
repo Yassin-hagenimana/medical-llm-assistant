@@ -1,0 +1,54 @@
+Category,Parameter,Value
+,,
+=== EXPERIMENT INFO ===,,
+Experiment_Info,Experiment ID,20260215_192547
+Experiment_Info,Date,2026-02-15 20:06:21
+Experiment_Info,Platform,Google Colab
+Experiment_Info,GPU,None (CPU only)
+Experiment_Info,GPU Memory GB,N/A
+,,
+=== DATASET CONFIG ===,,
+Dataset_Config,Dataset Name,medalpaca/medical_meadow_medical_flashcards
+Dataset_Config,Total Samples,5000
+Dataset_Config,Train Samples,8
+Dataset_Config,Val Samples,1
+Dataset_Config,Test Samples,1
+Dataset_Config,Train Split,85%
+Dataset_Config,Val Split,10%
+Dataset_Config,Test Split,5%
+,,
+=== MODEL CONFIG ===,,
+Model_Config,Base Model,TinyLlama/TinyLlama-1.1B-Chat-v1.0
+Model_Config,Model Size,1.1B parameters
+Model_Config,Fine tuning Method,LoRA (Low-Rank Adaptation)
+Model_Config,Quantization,8-bit
+Model_Config,LoRA Rank r,16
+Model_Config,LoRA Alpha,32
+Model_Config,LoRA Dropout,0.05
+Model_Config,Target Modules,"q_proj, o_proj, v_proj, k_proj"
+,,
+=== TRAINING CONFIG ===,,
+Training_Config,Num Epochs,1
+Training_Config,Batch Size,2
+Training_Config,Gradient Accumulation,4
+Training_Config,Effective Batch Size,8
+Training_Config,Learning Rate,0.0002
+Training_Config,Warmup Steps,100
+Training_Config,LR Scheduler,SchedulerType.COSINE
+Training_Config,Max Seq Length,512
+Training_Config,Optimizer,AdamW (paged_adamw_8bit)
+Training_Config,FP16,True
+,,
+=== TRAINING RESULTS ===,,
+Training_Results,Initial Loss,14.193107
+Training_Results,Final Loss,14.193107
+Training_Results,Loss Improvement,0.00%
+Training_Results,Total Training Steps,1
+Training_Results,Training Time,See Colab execution time
+,,
+=== EVALUATION RESULTS ===,,
+Evaluation_Results,Avg Base Score,0.1263
+Evaluation_Results,Avg Finetuned Score,0.1125
+Evaluation_Results,Overall Improvement,-10.92%
+Evaluation_Results,Best Metric,ROUGE_2
+Evaluation_Results,Best Improvement,0.66%

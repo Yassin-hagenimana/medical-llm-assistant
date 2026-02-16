@@ -371,19 +371,3 @@ Yassin Hagenimana
 ## Contact
 
 - GitHub: [@Yassin-hagenimana](https://github.com/Yassin-hagenimana)
-
-## Citation
-
-```bibtex
-@misc{medical-llm-assistant,
-  author = {Yassin Hagenimana},
-  title = {Medical LLM Assistant: Domain-Specific Fine-Tuning with LoRA},
-  year = {2026},
-  publisher = {GitHub},
-  url = {https://github.com/Yassin-hagenimana/medical-llm-assistant}
-}
-```
-
-## Disclaimer
-
-This AI assistant is for educational purposes only and should not be used as a substitute for professional medical advice, diagnosis, or treatment. Always consult with qualified healthcare providers for medical concerns.
