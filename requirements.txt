@@ -24,3 +24,76 @@ wandb>=0.15.0
 tensorboard>=2.14.0
 jupyter>=1.0.0
 ipywidgets>=8.1.0
+
+
+-- SQL queries to update category_color for professional_categories and creative_supporter_categories
+-- Colors cycle through 6 values: #f71849, #f98d21, #fed41e, #aee50b, #9867f6, #582898
+
+-- Update professional_categories table
+WITH ranked_categories AS (
+  SELECT
+    id,
+    ROW_NUMBER() OVER (ORDER BY display_order, created_at) as row_num
+  FROM professional_categories
+),
+color_mapping AS (
+  SELECT
+    id,
+    CASE ((row_num - 1) % 6)
+      WHEN 0 THEN '#f71849'
+      WHEN 1 THEN '#f98d21'
+      WHEN 2 THEN '#fed41e'
+      WHEN 3 THEN '#aee50b'
+      WHEN 4 THEN '#9867f6'
+      WHEN 5 THEN '#582898'
+    END as new_color
+  FROM ranked_categories
+)
+UPDATE professional_categories pc
+SET category_color = cm.new_color
+FROM color_mapping cm
+WHERE pc.id = cm.id;
+
+-- Update creative_supporter_categories table
+WITH ranked_categories AS (
+  SELECT
+    id,
+    ROW_NUMBER() OVER (ORDER BY display_order, created_at) as row_num
+  FROM creative_supporter_categories
+),
+color_mapping AS (
+  SELECT
+    id,
+    CASE ((row_num - 1) % 6)
+      WHEN 0 THEN '#f71849'
+      WHEN 1 THEN '#f98d21'
+      WHEN 2 THEN '#fed41e'
+      WHEN 3 THEN '#aee50b'
+      WHEN 4 THEN '#9867f6'
+      WHEN 5 THEN '#582898'
+    END as new_color
+  FROM ranked_categories
+)
+UPDATE creative_supporter_categories csc
+SET category_color = cm.new_color
+FROM color_mapping cm
+WHERE csc.id = cm.id;
+
+-- Verify the updates for professional_categories
+SELECT
+  category_name,
+  display_order,
+  category_color,
+  ROW_NUMBER() OVER (ORDER BY display_order, created_at) as position
+FROM professional_categories
+ORDER BY display_order, created_at;
+
+-- Verify the updates for creative_supporter_categories
+SELECT
+  category_name,
+  display_order,
+  category_color,
+  ROW_NUMBER() OVER (ORDER BY display_order, created_at) as position
+FROM creative_supporter_categories
+ORDER BY display_order, created_at;
+
