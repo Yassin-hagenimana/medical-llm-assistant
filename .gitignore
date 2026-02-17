@@ -212,6 +212,8 @@ node`_modules/
 # Models and checkpoints (large files)
 models/checkpoints/*
 models/final/*
+models/cache/*
+models/merged_model/*
 !models/checkpoints/.gitkeep
 !models/final/.gitkeep
 

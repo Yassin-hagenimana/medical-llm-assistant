@@ -12,7 +12,7 @@ const ChatInterface = () => {
   const [modelInfo, setModelInfo] = useState(null);
   const [settings, setSettings] = useState({
     temperature: 0.7,
-    maxLength: 200,
+    maxLength: 150,  // Reduced from 200 for faster CPU responses
   });
   
   const messagesEndRef = useRef(null);
@@ -64,12 +64,25 @@ const ChatInterface = () => {
     };
     setMessages((prev) => [...prev, userMessage]);
 
+    // Add loading message with CPU warning
+    const loadingMessage = {
+      id: messages.length + 1,
+      text: "🤔 Thinking... (This may take 30-90 seconds on CPU)",
+      isUser: false,
+      timestamp: new Date().toLocaleTimeString(),
+      isLoading: true,
+    };
+    setMessages((prev) => [...prev, loadingMessage]);
+
     // Show loading
     setIsLoading(true);
 
     try {
       // Call API
       const response = await sendQuery(text, settings.temperature, settings.maxLength);
+      
+      // Remove loading message and add assistant response
+      setMessages((prev) => prev.filter(msg => !msg.isLoading));
       
       // Add assistant response
       const assistantMessage = {
@@ -81,6 +94,9 @@ const ChatInterface = () => {
       };
       setMessages((prev) => [...prev, assistantMessage]);
     } catch (error) {
+      // Remove loading message
+      setMessages((prev) => prev.filter(msg => !msg.isLoading));
+      
       // Add error message
       const errorMessage = {
         id: messages.length + 1,

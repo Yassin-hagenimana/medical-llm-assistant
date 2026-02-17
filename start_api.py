@@ -28,8 +28,8 @@ try:
         sys.executable, "-m", "uvicorn",
         "deployment.api:app",
         "--host", "0.0.0.0",
-        "--port", "8000",
-        "--reload"
+        "--port", "8000"
+        # --reload removed: prevents model from being reloaded on every file change
     ], check=True)
 except KeyboardInterrupt:
     print("\n\nServer stopped by user")

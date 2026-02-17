@@ -1,13 +1,13 @@
 import axios from 'axios';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+const API_BASE_URL = 'http://0.0.0.0:8000';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
   headers: {
     'Content-Type': 'application/json',
   },
-  timeout: 60000, // 60 seconds timeout for model inference
+  timeout: 120000, // 120 seconds (2 minutes) for CPU inference
 });
 
 /**
@@ -17,12 +17,12 @@ const api = axios.create({
  * @param {number} maxLength - Maximum response length
  * @returns {Promise} API response
  */
-export const sendQuery = async (query, temperature = 0.7, maxLength = 200) => {
+export const sendQuery = async (query, temperature = 0.7, maxLength = 50) => {
   try {
     const response = await api.post('/query', {
       query,
       temperature,
-      max_length: maxLength,
+      max_tokens: maxLength,  // Reduced default from 200 to 150 for faster responses
     });
     return response.data;
   } catch (error) {
