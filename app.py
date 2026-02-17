@@ -96,7 +96,7 @@ You are a helpful medical assistant. Provide accurate, evidence-based medical in
             max_length=512
         ).to(model.device)
         
-        # Generate response
+        # Generate response with optimized settings for speed
         with torch.no_grad():
             outputs = model.generate(
                 **inputs,
@@ -107,7 +107,9 @@ You are a helpful medical assistant. Provide accurate, evidence-based medical in
                 top_k=50,
                 repetition_penalty=1.2,
                 pad_token_id=tokenizer.eos_token_id,
-                eos_token_id=tokenizer.eos_token_id
+                eos_token_id=tokenizer.eos_token_id,
+                use_cache=True,  # Enable KV cache for faster generation
+                num_beams=1  # Use greedy decoding (faster than beam search)
             )
         
         # Decode and clean response
@@ -218,7 +220,7 @@ with gr.Blocks(
                 max_length_slider = gr.Slider(
                     minimum=50,
                     maximum=300,
-                    value=150,
+                    value=100,  # Reduced default from 150 for faster responses
                     step=50,
                     label="Max Response Length",
                     info="Maximum tokens to generate"
@@ -277,16 +279,13 @@ with gr.Blocks(
     - **Fine-tuning Method:** LoRA (Low-Rank Adaptation)
     - **Dataset:** Medical Meadow Medical Flashcards
     - **Training Domain:** General medical knowledge and terminology
-    
-    ### Links
-    - [Project Repository](https://github.com/yourusername/medical-llm-assistant)
-    - [Model Card](https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v1.0)
+
     """)
 
 # Launch the interface
 if __name__ == "__main__":
     demo.launch(
-        share=True,
+        share=not IS_SPACES,  # Only create share link when running locally, not on Spaces
         theme=custom_theme,
         css=custom_css
     )
