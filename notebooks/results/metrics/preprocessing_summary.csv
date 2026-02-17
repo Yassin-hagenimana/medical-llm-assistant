@@ -1,5 +1,5 @@
 Split,Samples,Percentage,Purpose
-Training,850,85.0%,Model training and weight updates
-Validation,100,10.0%,Hyperparameter tuning and early stopping
-Test,50,5.0%,Final unbiased model evaluation
-Total,1000,100.0%,Complete dataset
+Training,2550,85.0%,Model training and weight updates
+Validation,301,10.0%,Hyperparameter tuning and early stopping
+Test,149,5.0%,Final unbiased model evaluation
+Total,3000,100.0%,Complete dataset

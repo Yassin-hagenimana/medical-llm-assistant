@@ -1,12 +1,12 @@
 Metric,Value
-Initial Loss,14.193107
-Final Loss,14.193107
-Average Loss,14.193107
-Minimum Loss,14.193107
-Loss Improvement (%),0.00%
-Total Steps,1
-Total Epochs,1
-Training Samples,8
+Initial Loss,14.796332
+Final Loss,0.223441
+Average Loss,1.244628
+Minimum Loss,0.218497
+Loss Improvement (%),98.49%
+Total Steps,950
+Total Epochs,3
+Training Samples,2550
 Batch Size,2
 Learning Rate,0.0002
 Gradient Accumulation,4

@@ -1,2 +1,8 @@
 ,question,expected,base,finetuned
-Example_1,What is a characteristic feature of Type 1 RTA in terms of urine citrate levels? Bonus: Why does thi...,Type 1 RTA presents with decreased levels of urine citrate. This occurs because citrate is reabsorbe...,,
+Example_1,"What does H2CO3 dissociate into inside the cells of the early PCT, after being formed from H2O and C...","Inside the cells of the early PCT, H2CO3 (carbonic acid) dissociates into H+ (hydrogen ions) and HCO...",,What is the name of the enzyme that catalyzes the dissociation of H2CO3 into H2O and CO2 inside the ...
+Example_2,"Which type of leprosy can be contained within macrophages, and how is this containment achieved?","Tuberculoid leprosy can be contained within macrophages, which is achieved through the body's immune...",,"What is the name of the type of leprosy that can be contained within macrophages, and how is this co..."
+Example_3,How can constriction of the ureter impact glomerular filtration rate (GFR)?,Constriction of the ureter can cause a decrease in glomerular filtration rate (GFR).,,Glomerular filtration rate (GFR) is a measure of the rate at which filtered fluid is removed from th...
+Example_4,What are the common clinical manifestations of scarlet fever and how can it be identified?,"Scarlet fever is a bacterial infection that can cause a range of symptoms, including fever, sore thr...",,"What is the typical presentation of scarlet fever and how can it be identified?
+Scarlet fever is a v..."
+Example_5,"Which drug intoxication is characterized by symptoms such as perceptual distortion (visual, auditory...",LSD (lysergic acid diethylamide) intoxication presents with symptoms such as perceptual distortion (...,,"What is the name of the drug that is commonly used to treat alcohol withdrawal?
+What is the name of ..."

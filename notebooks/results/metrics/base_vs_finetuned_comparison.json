@@ -1,0 +1,17 @@
+[
+  {
+    "question": "What is diabetes?",
+    "base_model_response": "Diabetes is a group of diseases that affect the body's ability to produce or use insulin. Insulin is a hormone that helps the body to transport glucose, or sugar, into cells for energy. In individuals with diabetes, the body does not produce enough insulin or the insulin it produces is not effective enough to meet the body's needs. Diabetes can affect any part of the body, but most commonly affect",
+    "finetuned_model_response": "Diabetes is a medical condition that occurs when the body does not produce or use insulin effectively. Insulin is a hormone that helps the body to use glucose, a type of sugar, for energy. When the body does not produce enough insulin or the insulin that it produces is not enough to meet the demands of the body, glucose builds up in the bloodstream and can lead to symptoms such as high blood sugar levels,"
+  },
+  {
+    "question": "What are the symptoms of hypertension?",
+    "base_model_response": "Yes, hypertension is a common health condition that can cause a range of symptoms, including:\n- Pressure in the chest or neck\n- Headaches\n- Sweating\n- Lightheadedness\n- Shortness of breath\n- Dizziness\n- Nausea or vomiting\n- Weakness or fatigue\n- Muscle pain or tension\n- Aches or pains in the arms or legs\n- Swelling in the feet",
+    "finetuned_model_response": "Hypertension is characterized by a high blood pressure (systolic BP \u2265 140 mm Hg or diastolic BP \u2265 90 mm Hg)."
+  },
+  {
+    "question": "How is pneumonia treated?",
+    "base_model_response": "Pneumonia is a type of lung infection that causes inflammation of the lungs. It can be caused by bacteria, viruses, or fungi. The treatment for pneumonia depends on the cause. For bacterial pneumonia, antibiotics such as penicillin or amoxicillin are used to treat the infection. For viral pneumonia, a vaccine may be recommended. For fungal pneumonia",
+    "finetuned_model_response": "Pneumonia is typically treated with antibiotics, which can help to kill the bacteria that are causing the infection."
+  }
+]

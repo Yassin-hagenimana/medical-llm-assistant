@@ -1,0 +1,55 @@
+{
+  "average_scores": {
+    "bleu": 0.04759924447843649,
+    "rouge1": 0.3205578299434181,
+    "rouge2": 0.10907102081338864,
+    "rougeL": 0.273871269548593
+  },
+  "individual_samples": [
+    {
+      "question": "What is diabetes?",
+      "reference": "Diabetes is a chronic condition that affects how your body processes blood sugar (glucose). It occurs when your pancreas doesn't produce enough insulin or when your body can't effectively use the insulin it produces.",
+      "prediction": "Diabetes is a metabolic disorder in which the body is unable to produce or properly use insulin. This can result in high blood sugar levels, which can lead to damage to the body's tissues and organs. It is characterized by the presence of excess glucose in the blood, which can cause a range of symptoms such as blurred vision, fatigue, and weight loss. Treatment for diabetes may involve lifestyle changes, such as dietary modifications and exercise, as well as medications to control blood sugar levels.",
+      "bleu": 0.016142877302789668,
+      "rouge1": 0.2459016393442623,
+      "rouge2": 0.049999999999999996,
+      "rougeL": 0.14754098360655737
+    },
+    {
+      "question": "What are the symptoms of hypertension?",
+      "reference": "Hypertension symptoms may include headaches, shortness of breath, dizziness, chest pain, and visual changes. However, many people with high blood pressure have no symptoms at all.",
+      "prediction": "The symptoms of hypertension include headaches, palpitations, shortness of breath, and fatigue.",
+      "bleu": 0.03590656149595588,
+      "rouge1": 0.42105263157894735,
+      "rouge2": 0.16666666666666666,
+      "rougeL": 0.3684210526315789
+    },
+    {
+      "question": "How is pneumonia treated?",
+      "reference": "Pneumonia treatment typically includes antibiotics for bacterial pneumonia, rest, fluids, and fever reducers. Severe cases may require hospitalization and oxygen therapy.",
+      "prediction": "Pneumonia is typically treated with antibiotics, but this may not always be effective.",
+      "bleu": 0.011050777889861531,
+      "rouge1": 0.23529411764705882,
+      "rouge2": 0.0,
+      "rougeL": 0.23529411764705882
+    },
+    {
+      "question": "What causes migraine headaches?",
+      "reference": "Migraines are caused by a combination of genetic and environmental factors. Triggers can include stress, certain foods, hormonal changes, and sensory stimuli.",
+      "prediction": "The headaches associated with migraines are caused by the release of chemicals from the brain's trigeminal neurons. These neurons, which are located in the trigeminal neuralgia, send signals to the brain to initiate a migraine headache. The release of these chemicals is caused by a variety of factors, including changes in blood flow to the brain, changes in brain chemistry, and genetic factors. The headaches associated with migraines can be severe and debilitating, and they can cause a range of symptoms, including sensitivity to light and sound, nausea, vomiting, and sensory disturbances. Treatment for migraines can include medications",
+      "bleu": 0.019288441999029324,
+      "rouge1": 0.23140495867768593,
+      "rouge2": 0.10084033613445377,
+      "rougeL": 0.19834710743801653
+    },
+    {
+      "question": "What is the difference between Type 1 and Type 2 diabetes?",
+      "reference": "Type 1 diabetes is an autoimmune condition where the body doesn't produce insulin. Type 2 diabetes occurs when the body becomes resistant to insulin or doesn't produce enough insulin, often related to lifestyle factors.",
+      "prediction": "Type 1 diabetes is an autoimmune disorder in which the body's immune system attacks the insulin-producing cells in the pancreas, while Type 2 diabetes is a metabolic disorder in which the body's cells or organs fail to produce or use insulin properly.",
+      "bleu": 0.15560756370454606,
+      "rouge1": 0.46913580246913583,
+      "rouge2": 0.22784810126582275,
+      "rougeL": 0.4197530864197531
+    }
+  ]
+}

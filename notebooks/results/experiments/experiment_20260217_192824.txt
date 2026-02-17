@@ -5,20 +5,20 @@ MEDICAL LLM FINE-TUNING - COMPLETE EXPERIMENT LOG
 
 EXPERIMENT IDENTIFICATION
 ================================================================================
-Experiment ID:      20260215_192547
-Date & Time:        2026-02-15 20:06:21
+Experiment ID:      20260217_192824
+Date & Time:        2026-02-17 20:39:18
 Platform:           Google Colab
-GPU:                None (CPU only)
-GPU Memory:         N/A GB
+GPU:                Tesla T4
+GPU Memory:         15.64 GB
 
 ================================================================================
 DATASET CONFIGURATION
 ================================================================================
 Dataset:            medalpaca/medical_meadow_medical_flashcards
 Total Samples:      5,000 (subset from 33,955)
-Training:           8 samples (85%)
-Validation:         1 samples (10%)
-Test:               1 samples (5%)
+Training:           2,550 samples (85%)
+Validation:         301 samples (10%)
+Test:               149 samples (5%)
 
 Data Format:        Instruction-Response pairs
 Domain:             Medical Q&A
@@ -35,7 +35,7 @@ Fine-tuning Method: LoRA (Low-Rank Adaptation)
 - LoRA Rank (r):    16
 - LoRA Alpha:       32
 - LoRA Dropout:     0.05
-- Target Modules:   q_proj, o_proj, v_proj, k_proj
+- Target Modules:   o_proj, v_proj, k_proj, q_proj
 - Trainable Params: ~0.5% of total
 
 Quantization:       8-bit (Memory optimization)
@@ -46,7 +46,7 @@ Quantization:       8-bit (Memory optimization)
 ================================================================================
 TRAINING CONFIGURATION
 ================================================================================
-Number of Epochs:           1
+Number of Epochs:           3
 Batch Size:                 2
 Gradient Accumulation:      4
 Effective Batch Size:       8
@@ -65,13 +65,13 @@ Save Steps:                 500
 ================================================================================
 TRAINING RESULTS
 ================================================================================
-Initial Loss:               14.193107
-Final Loss:                 14.193107
-Minimum Loss:               14.193107
-Average Loss:               14.193107
+Initial Loss:               14.796332
+Final Loss:                 0.223441
+Minimum Loss:               0.218497
+Average Loss:               1.244628
 
-Loss Improvement:           0.00% (Reduction)
-Total Steps:                1
+Loss Improvement:           98.49% (Reduction)
+Total Steps:                950
 
 Training completed successfully ✓
 
@@ -82,56 +82,56 @@ EVALUATION RESULTS (Base vs Fine-tuned)
 Metric Comparison:
 Metric                       Base   Fine-tuned  Improvement
 ------------------------------------------------------------
-BLEU                       0.0000       0.0000        0.00%
-BLEU_1                     0.2500       0.2231      -10.74%
-BLEU_2                     0.0840       0.0750      -10.75%
-BLEU_3                     0.0254       0.0252       -0.84%
-BLEU_4                     0.0000       0.0000        0.00%
-ROUGE_1                    0.3117       0.2876       -7.73%
-ROUGE_2                    0.1053       0.1060        0.66%
-ROUGE_L                    0.2338       0.1830      -21.71%
+BLEU                       0.1171       0.1280        9.27%
+BLEU_1                     0.3088       0.3911       26.64%
+BLEU_2                     0.1381       0.1861       34.78%
+BLEU_3                     0.0810       0.1193       47.30%
+BLEU_4                     0.0544       0.0832       52.71%
+ROUGE_1                    0.3237       0.3978       22.90%
+ROUGE_2                    0.1708       0.2434       42.55%
+ROUGE_L                    0.2427       0.3231       33.14%
 ------------------------------------------------------------
-AVERAGE                    0.1263       0.1125      -10.92%
+AVERAGE                    0.1796       0.2340       30.31%
 
-✓ Overall Performance Improvement: -10.92%
-✓ Best Performing Metric: ROUGE_2 (0.66%)
+✓ Overall Performance Improvement: +30.31%
+✓ Best Performing Metric: BLEU_4 (52.71%)
 
 ================================================================================
 GENERATED FILES & OUTPUTS
 ================================================================================
 
 Visualizations:
-  ✓ results/visualizations/data_exploration/comprehensive_data_analysis.png
-  ✓ results/visualizations/preprocessing/data_split_analysis.png
-  ✓ results/visualizations/training/training_progress.png
-  ✓ results/visualizations/evaluation/comprehensive_evaluation.png
-  ✓ results/visualizations/evaluation/example_predictions.png
+   results/visualizations/data_exploration/comprehensive_data_analysis.png
+   results/visualizations/preprocessing/data_split_analysis.png
+   results/visualizations/training/training_progress.png
+   results/visualizations/evaluation/comprehensive_evaluation.png
+   results/visualizations/evaluation/example_predictions.png
 
 Metrics & Tables:
-  ✓ results/metrics/data_exploration_statistics.csv
-  ✓ results/metrics/preprocessing_summary.csv
-  ✓ results/metrics/training_metrics.csv
-  ✓ results/metrics/evaluation_results.csv
-  ✓ results/metrics/example_predictions.csv
+   results/metrics/data_exploration_statistics.csv
+   results/metrics/preprocessing_summary.csv
+   results/metrics/training_metrics.csv
+   results/metrics/evaluation_results.csv
+   results/metrics/example_predictions.csv
 
 Models:
-  ✓ results/models/finetuned_medical_llm/ (Fine-tuned model with LoRA)
-  ✓ results/models/base_model_metrics.json
-  ✓ results/models/finetuned_model_metrics.json
+   results/models/finetuned_medical_llm/ (Fine-tuned model with LoRA)
+   results/models/base_model_metrics.json
+   results/models/finetuned_model_metrics.json
 
 Experiment Tracking:
-  ✓ results/experiments/experiment_20260215_192547.txt (This log)
-  ✓ results/experiments/experiment_configuration.csv
+   results/experiments/experiment_20260217_192824.txt (This log)
+   results/experiments/experiment_configuration.csv
 
 ================================================================================
 CONCLUSIONS & RECOMMENDATIONS
 ================================================================================
 
 1. Training Success:
-   - Check training metrics
+    Model successfully fine-tuned with significant loss reduction
 
 2. Evaluation Results:
-   - Check evaluation results
+    Fine-tuned model outperforms base model across metrics
 
 3. Next Steps:
    - Deploy model for inference testing
@@ -149,4 +149,4 @@ CONCLUSIONS & RECOMMENDATIONS
 ================================================================================
 EXPERIMENT COMPLETED SUCCESSFULLY ✓
 ================================================================================
-Generated: 2026-02-15 20:06:21
+Generated: 2026-02-17 20:39:18

@@ -1,3 +1,9 @@
+---
+title: medical-llm-assistant
+app_file: app.py
+sdk: gradio
+sdk_version: 6.5.1
+---
 # Medical LLM Assistant
 
 A domain-specific AI assistant fine-tuned for medical question-answering using Large Language Models (LLMs) with Parameter-Efficient Fine-Tuning (PEFT) techniques.

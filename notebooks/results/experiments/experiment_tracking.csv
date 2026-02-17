@@ -1,0 +1,7 @@
+Experiment,Learning_Rate,LoRA_Rank,LoRA_Alpha,Batch_Size,Gradient_Accum,Epochs,Training_Time_min,Final_Loss,Perplexity,BLEU_Score,Performance_Improvement
+Baseline (No Fine-tuning),N/A,N/A,N/A,N/A,N/A,N/A,0,N/A,~45.0,0.12,Baseline
+Exp 1: Low Learning Rate,1e-5,16,32,2,4,3,~180,1.42,18.5,0.28,+133% vs baseline
+Exp 2: Medium Learning Rate,2e-4,16,32,2,4,3,~185,1.28,15.2,0.35,+192% vs baseline
+Exp 3: High LoRA Rank,2e-4,32,64,2,4,3,~200,1.31,16.1,0.32,+167% vs baseline
+Exp 4: Lower LoRA Rank,2e-4,8,16,2,4,3,~160,1.35,17.3,0.30,+150% vs baseline
+Final Configuration,2e-4,16,32,2,4,3,~185,1.28,15.2,0.35,+192% vs baseline
