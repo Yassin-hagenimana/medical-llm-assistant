@@ -2,7 +2,7 @@
 
 A fine-tuned TinyLlama-1.1B model specialized for medical question answering using LoRA (Low-Rank Adaptation). This project demonstrates domain-specific fine-tuning of large language models for healthcare applications.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Yassin-hagenimana/medical-llm-assistant/blob/main/notebooks/medical-llm-pipeline-standalone-colab.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1GrlgNTEC_sDUdTkgzNslzeMrNp0PVGGZ)
 [![Hugging Face Space](https://img.shields.io/badge/Hugging%20Face-Space-blue)](https://huggingface.co/spaces/yassin321/medical-llm-assistant)
 
 ## Table of Contents
@@ -270,7 +270,7 @@ bacteria that are causing the infection.
 
 1. **Open the Colab Notebook:**
    
-   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Yassin-hagenimana/medical-llm-assistant/blob/main/notebooks/medical-llm-pipeline-standalone-colab.ipynb)
+   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1GrlgNTEC_sDUdTkgzNslzeMrNp0PVGGZ)
 
 2. **Run all cells** - The notebook includes:
    - Automatic dependency installation
@@ -566,6 +566,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Contact & Links
 
 - **Live Demo:** [Hugging Face Space](https://huggingface.co/spaces/yassin321/medical-llm-assistant)
-- **Notebook:** [Google Colab](https://colab.research.google.com/github/Yassin-hagenimana/medical-llm-assistant/blob/main/notebooks/medical-llm-pipeline-standalone-colab.ipynb)
+- **Notebook:** [Google Colab](https://colab.research.google.com/drive/1GrlgNTEC_sDUdTkgzNslzeMrNp0PVGGZ)
 - **GitHub:** [Repository](https://github.com/Yassin-hagenimana/medical-llm-assistant)
 - **Issues:** [Report bugs or request features](https://github.com/Yassin-hagenimana/medical-llm-assistant/issues)
