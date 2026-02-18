@@ -234,7 +234,7 @@ with gr.Blocks(
                 )
                 clear_btn = gr.Button(
                     "Clear",
-                    variant="secondary",
+                    variant="primary",
                     size="lg"
                 )
         
